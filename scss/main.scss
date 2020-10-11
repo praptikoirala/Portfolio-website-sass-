@@ -38,8 +38,25 @@ img{
 /* Home-page
    Home-Header */
 #main-head{
-    background: url('/img/showcase.jpg') no-repeat center center/cover;
+    position: relative;
+    background: $light-color1;
     height:100vh;
+}
+
+#main-head::before{
+    content:'';
+    background: url('/img/showcase.jpg') no-repeat center center/cover;
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    opacity:0.6;
+}
+
+#main-head .container{
+    position: relative;
+    z-index: 5;
 }
 
 //Navbar
