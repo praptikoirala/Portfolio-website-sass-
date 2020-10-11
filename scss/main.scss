@@ -228,6 +228,7 @@ header .main-nav{
     border-bottom: 4px solid $color;
 }
 
+//About-Section
 section{
     background: $main-color;
 }
@@ -312,6 +313,7 @@ section{
 }
 
 #about-section3{
+    border-bottom: 2px solid $color;
 
     .logos{
         display: grid;
@@ -320,6 +322,38 @@ section{
 
         img{
             width:80%;
+        }
+    }
+}
+
+#about-section4{
+
+    & .testimonials{
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns:repeat(4,1fr);
+        grid-gap:1.5rem;
+
+        & .test-para{
+            margin-bottom: 1rem;
+            background: $light-color;
+            padding:0.5rem;
+            text-align: center;
+            border-radius: 2px;
+        }
+
+        & .test-img{
+
+            img{
+                height:70px;
+                width:70px;
+                border-radius: 50%;
+            }
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 1rem;
         }
     }
 }
