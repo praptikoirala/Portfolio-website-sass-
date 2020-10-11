@@ -87,19 +87,19 @@ img {
    Home-Header */
 #main-head {
   position: relative;
-  background: #9D9D9D;
+  background: url("/img/showcase.jpg") no-repeat center center/cover;
   height: 100vh;
 }
 
 #main-head::before {
   content: '';
-  background: url("/img/showcase.jpg") no-repeat center center/cover;
+  background: #B9B9B7;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  opacity: 0.6;
+  opacity: 0.29;
 }
 
 #main-head .container {
@@ -148,7 +148,7 @@ header .main-nav ul li a.current {
 
 #main-head .head-content {
   text-align: center;
-  padding-top: 20%;
+  padding-top: 23%;
 }
 
 #main-head .head-content h2 {

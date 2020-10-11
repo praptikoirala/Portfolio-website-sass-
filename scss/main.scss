@@ -39,19 +39,19 @@ img{
    Home-Header */
 #main-head{
     position: relative;
-    background: $light-color1;
+    background: url('/img/showcase.jpg') no-repeat center center/cover;
     height:100vh;
 }
 
 #main-head::before{
     content:'';
-    background: url('/img/showcase.jpg') no-repeat center center/cover;
+    background: $light-color;
     position: absolute;
     top:0;
     left:0;
     height: 100%;
     width:100%;
-    opacity:0.6;
+    opacity:0.29;
 }
 
 #main-head .container{
@@ -94,7 +94,7 @@ header .main-nav{
 //Home-HeaderContent
 #main-head .head-content{
     text-align: center;
-    padding-top: 20%;
+    padding-top: 23%;
 
     h2{
         font-size: 2.5rem;
