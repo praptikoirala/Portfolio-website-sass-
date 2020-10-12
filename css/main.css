@@ -50,6 +50,101 @@ header .main-nav ul li a, #main-head .head-content a {
   font-size: 1.2rem;
 }
 
+.items {
+  margin-top: 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+}
+
+.item .itm-img {
+  background: #9D9D9D;
+  padding: 0.5rem;
+}
+
+.item .itm-img .item-img {
+  background: #B9B9B7;
+  padding: 0.5rem;
+  border-radius: 2px;
+}
+
+.item .itm-img img {
+  height: 250px;
+  width: 375px;
+}
+
+.item .itm-txt {
+  position: relative;
+  margin-bottom: 0.7rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.item .itm-txt::before {
+  content: '';
+  background: #DBA768;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
+
+.item .itm-txt h2, .item .itm-txt p {
+  position: relative;
+  z-index: 2;
+}
+
+.item .itm-txt h2 {
+  margin-bottom: 0.5rem;
+}
+
+.item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.item:hover h2 {
+  font-size: 1.8rem;
+}
+
+.item:hover p {
+  font-size: 1.3rem;
+}
+
+/* 
+
+
+.itm-txt{
+        text-align: center;
+
+        h2{
+            margin-bottom:0.5rem;
+        }
+    }
+
+
+ &::after{
+        content: '';
+        background: $color;
+        display:block;
+        position: absolute;
+        top:0;
+        left:0;
+        height:100%;
+        widows: 100%;
+        opacity:0.8;
+        transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg) ;
+        transition: transform 2s cubic-bezier(0.2,1,0.3,1);
+    }
+
+    &:hover:after{
+        transform: scale(2) translateX(0) translateY(0) rotate(-28deg) ;
+    }
+*/
 * {
   margin: 0;
   padding: 0;
@@ -280,7 +375,8 @@ header .main-nav ul li a.current {
   margin-bottom: 0.5rem;
 }
 
-#about-head {
+#about-head,
+#work-head {
   background: url("/img/showcase.jpg") no-repeat 0% 0%/cover;
   height: 6rem;
   border-bottom: 4px solid #DBA768;
@@ -424,8 +520,6 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -433,9 +527,10 @@ section {
 }
 
 #about-section4 .testimonials .test-img img {
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
+  margin: 0rem 0.5rem;
 }
 
 #main-foot {

@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'utilities';
+@import 'gallery';
 
 *{
     margin:0;
@@ -219,20 +220,22 @@ header .main-nav{
         margin-bottom: 0.5rem;
     }
 }
-
-//About-page 
-//Header
-#about-head{
+ 
+//HeaderForAllExceptHome
+#about-head,
+#work-head{
     background: url('/img/showcase.jpg') no-repeat 0% 0%/cover;
     height:6rem;
     border-bottom: 4px solid $color;
 }
 
+//About
 //About-Section
 section{
     background: $main-color;
 }
 
+//About-Section1
 #about-section1{
 
     & .about-info{
@@ -290,6 +293,7 @@ section{
     }
 }
 
+//About-Section2
 #about-section2{
     background: $dark-color;
     color:#ffffff;
@@ -312,6 +316,7 @@ section{
     }
 }
 
+////About-Section3
 #about-section3{
     border-bottom: 2px solid $color;
 
@@ -326,6 +331,7 @@ section{
     }
 }
 
+//About-Section4
 #about-section4{
 
     & .testimonials{
@@ -343,15 +349,15 @@ section{
         }
 
         & .test-img{
-
+            
             img{
-                height:70px;
-                width:70px;
+                height:50px;
+                width:50px;
                 border-radius: 50%;
+                margin:0rem 0.5rem;
             }
 
             display: flex;
-            justify-content: space-around;
             align-items: center;
             font-size: 1rem;
         }
