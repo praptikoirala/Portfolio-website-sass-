@@ -1,6 +1,6 @@
 .container {
   max-width: 1200px;
-  padding: 0rem 3rem;
+  padding: 0rem 2rem;
   margin: auto;
   overflow: hidden;
 }
@@ -56,46 +56,21 @@ header .main-nav ul li a, #main-head .head-content a {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.5rem;
+  grid-gap: 1.5rem;
 }
 
-.item .itm-img {
-  background: #9D9D9D;
-  padding: 0.5rem;
-}
-
-.item .itm-img .item-img {
-  background: #B9B9B7;
-  padding: 0.5rem;
-  border-radius: 2px;
-}
-
-.item .itm-img img {
-  height: 250px;
-  width: 375px;
+.item {
+  background: #DBA768;
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
 
 .item .itm-txt {
-  position: relative;
-  margin-bottom: 0.7rem;
   text-align: center;
   padding: 0.5rem;
-}
-
-.item .itm-txt::before {
-  content: '';
-  background: #DBA768;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0.5;
-}
-
-.item .itm-txt h2, .item .itm-txt p {
-  position: relative;
-  z-index: 2;
+  border-top: 1px solid #333333;
 }
 
 .item .itm-txt h2 {
@@ -103,16 +78,8 @@ header .main-nav ul li a, #main-head .head-content a {
 }
 
 .item:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.item:hover h2 {
-  font-size: 1.8rem;
-}
-
-.item:hover p {
-  font-size: 1.3rem;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 /* 
@@ -376,7 +343,8 @@ header .main-nav ul li a.current {
 }
 
 #about-head,
-#work-head {
+#work-head,
+#contact-head {
   background: url("/img/showcase.jpg") no-repeat 0% 0%/cover;
   height: 6rem;
   border-bottom: 4px solid #DBA768;
@@ -531,6 +499,94 @@ section {
   width: 50px;
   border-radius: 50%;
   margin: 0rem 0.5rem;
+}
+
+#contact-sec1 .ip-frm {
+  margin-top: 2rem;
+}
+
+#contact-sec1 .ip-frm .grid-dis {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+#contact-sec1 .ip-frm .grid-dis input {
+  padding: 8px;
+}
+
+#contact-sec1 .ip-frm .flex-dis {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact-sec1 .ip-frm .flex-dis textarea {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+#contact-sec1 .ip-frm .flex-dis .sub-btn {
+  background: #9D9D9D;
+  border: 0.5px solid #B9B9B7;
+  border-radius: 2px;
+  margin-top: 1rem;
+  padding: 0.6rem 0;
+  width: 50%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#contact-sec1 .ip-frm .flex-dis .sub-btn:hover {
+  cursor: pointer;
+  background: #DBA768;
+  border-color: #9D9D9D;
+}
+
+#contact-sec2 {
+  background: #9D9D9D;
+}
+
+#contact-sec2 .infos {
+  padding: 0.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+}
+
+#contact-sec2 .infos h2 {
+  margin-top: 0.6rem;
+}
+
+#contact-sec2 .infos p {
+  margin-top: 0.4rem;
+  font-size: 1.1rem;
+}
+
+#contact-sec3 {
+  text-align: center;
+  background: #DBA768;
+}
+
+#contact-sec3 .large {
+  padding: 0.5rem;
+}
+
+#contact-sec3 .large h1 {
+  font-size: 4rem;
 }
 
 #main-foot {
