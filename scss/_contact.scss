@@ -7,7 +7,7 @@
         .grid-dis{
             display: grid;
             grid-template-columns: repeat(2,1fr);
-            grid-gap:1rem;
+            grid-gap:2rem;
 
             input{
                 padding:8px;
@@ -20,7 +20,7 @@
            align-items: center;
 
            textarea{
-               margin-top:1rem;
+               margin-top:2rem;
                width:100%;
            }
 
@@ -28,7 +28,7 @@
                background: $light-color1;
                border:0.5px solid $light-color;
                border-radius:2px;
-               margin-top: 1rem;
+               margin-top: 2rem;
                padding:0.6rem 0;
                width:50%;
                transition: all 0.5s ease-in-out;
@@ -73,7 +73,113 @@
         padding:0.5rem;
 
         h1{
-            font-size: 4rem;
+            font-size: 3.6rem;
         }
     }
+}
+
+
+@media(max-width:880px){
+    #contact-sec3{
+        padding:2rem;
+
+        .large{
+    
+            h1{
+                font-size: 2.5rem;
+            }
+        }
+    }   
+}
+
+@media(max-width:720px){
+    #contact-sec3{
+        padding:1.5rem;
+        
+        .large{
+            padding:1rem;
+    
+            h1{
+                font-size:2rem;
+            }
+        }
+    }      
+}
+
+@media(max-width:620px){
+    #contact-sec1{
+        padding-top: 1.8rem;
+
+        .center{
+
+            h2{
+                font-size: 1.65rem;
+                margin-bottom:0.6rem;
+            }
+        }
+        .ip-frm{
+            margin-top:1rem;
+            
+            .grid-dis{
+                grid-template-columns: repeat(1,1fr);
+            }
+    
+           .flex-dis{
+    
+               .sub-btn{
+                   width:100%;
+               }
+           }   
+        }
+    }
+
+    #contact-sec2{
+        padding:1rem;
+
+        .infos{
+            flex-direction: column;
+    
+            h2{
+                font-size: 1.45rem;
+                margin-top:0.4rem;
+            }
+    
+            p{
+                font-size: 1rem;
+            }
+
+            .info{
+                padding:0.8rem;
+                border-bottom: 1px dotted $dark-color;
+            }
+
+            .lst-info{
+                border:none;
+            }
+        }
+    }  
+    
+    #contact-sec3{
+        padding:1rem;
+        
+        .large{
+    
+            h1{
+                font-size:1.7rem;
+            }
+        }
+    }   
+}
+
+@media(max-width:575px){
+    #contact-sec3{
+        padding:1rem;
+        
+        .large{
+    
+            h1{
+                font-size:1.5rem;
+            }
+        }
+    }   
 }

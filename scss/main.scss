@@ -98,7 +98,7 @@ header .main-nav{
 //Home-HeaderContent
 #main-head .head-content{
     text-align: center;
-    padding-top: 23%;
+    padding-top:25%;
 
     h2{
         font-size: 2.5rem;
@@ -251,7 +251,7 @@ header .main-nav{
 
 @media(max-width:1150px){
     #main-head .head-content{
-        padding-top: 27%;
+        padding-top:35%;
         color:#ffffff;
 
         a{
@@ -268,7 +268,7 @@ header .main-nav{
 
 @media(max-width:790px){
     #main-head .head-content{
-        padding-top: 35%;
+        padding-top: 45%;
 
         h2{
             font-size: 2.45rem;
@@ -325,18 +325,21 @@ header .main-nav{
         }
     }
     
-    #main-section1 .boxes-top{
-        margin-top: 1.5rem;
-        grid-template-columns: repeat(1,1fr);
-        grid-gap:1rem;
+    #main-section1 {
+        padding:2rem 0 0 0;
 
-        div{
-            padding:1rem;
-        }
+       .boxes-top{
+            padding:0.2rem;
+            margin-top: 1.5rem;
+            margin-bottom:0.2rem;
+            grid-template-columns: repeat(1,1fr);
+            grid-gap:1rem;
 
-        div:not(.last){
-            border-bottom: 0.5px dotted $light-color1;
-        }
+            div:not(.last){
+                padding-bottom:1rem;
+                border-bottom: 0.5px dotted $light-color1;
+            }        
+       }
     }
 
     #main-section2 .boxes-mid{
@@ -377,13 +380,13 @@ header .main-nav{
     header .main-nav{
     
         ul li{
-            padding:0.4rem;
-            font-size: 1.3rem;
+            padding:0.2rem;
+            font-size: 1.2rem;
         }
     }
     
     #main-head .head-content{
-        padding-top: 38%;
+        padding-top: 65%;
 
         h2{
             font-size: 1.85rem;
@@ -396,7 +399,7 @@ header .main-nav{
     }
 
     #main-section3{
-        padding-top: 1.5rem;
+        padding-top: 1rem;
     }
 
     #main-section1,
