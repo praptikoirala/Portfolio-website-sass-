@@ -13,6 +13,13 @@
     transition:all 0.5s;
 }
 
+@media(max-width:600px){
+    %btnshared{
+        padding:0.8rem;
+        font-size: 1rem;
+    }
+}
+
 //Padding
 .py{
     &-1{padding:1rem 0}
@@ -44,7 +51,15 @@
 #about-head,
 #work-head,
 #contact-head{
-    background: url('/img/showcase.jpg') no-repeat 0% 0%/cover;
+    background: #AFB6BE;
     height:6rem;
     border-bottom: 4px solid $color;
+}
+
+@media(max-width:650px){
+    #about-head,
+    #work-head,
+    #contact-head{
+        height:8rem;
+    }
 }
