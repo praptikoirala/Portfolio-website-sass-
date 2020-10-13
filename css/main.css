@@ -702,6 +702,10 @@ header .main-nav ul li a.current {
 }
 
 @media (max-width: 500px) {
+  header .main-nav ul li {
+    padding: 0.4rem;
+    font-size: 1.3rem;
+  }
   #main-head .head-content {
     padding-top: 38%;
   }
