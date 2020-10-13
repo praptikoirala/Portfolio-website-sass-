@@ -1,6 +1,8 @@
 @import 'variables';
 @import 'utilities';
 @import 'gallery';
+@import 'about';
+@import 'contact';
 
 *{
     margin:0;
@@ -36,8 +38,9 @@ img{
 }
 
 
-/* Home-page
-   Home-Header */
+//Home-page
+
+//Home-Header 
 #main-head{
     position: relative;
     background: url('/img/showcase.jpg') no-repeat center center/cover;
@@ -173,7 +176,7 @@ header .main-nav{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap:1rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
     text-align: center;
 
     & .icon-no{
@@ -221,231 +224,7 @@ header .main-nav{
     }
 }
  
-//HeaderForAllExceptHome
-#about-head,
-#work-head,
-#contact-head{
-    background: url('/img/showcase.jpg') no-repeat 0% 0%/cover;
-    height:6rem;
-    border-bottom: 4px solid $color;
-}
-
-//About
-//About-Section
-section{
-    background: $main-color;
-}
-
-//About-Section1
-#about-section1{
-
-    & .about-info{
-        margin-top: 3rem;
-        display: grid;
-        grid-template-areas:
-        'bioimg bio bio'
-        'a-1 a-2 a-3';
-        grid-gap:1.4rem;
-
-        & .bio-img{
-            grid-area:bioimg;
-        }
-        & .bio-inf{
-            grid-area: bio;
-        }
-        & .award-1{
-            grid-area:a-1;
-        }
-        & .award-2{
-            grid-area:a-2;
-        }
-        & .award-3{
-            grid-area:a-3;
-        }
-
-        & .bio-inf{
-            background: $light-color;
-            padding:0 1rem;
-            border-left:4px solid $color;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-
-            h3{
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
-            }
-        }
-
-        & .aw{
-            margin-top: 1rem;
-            text-align: center;
-
-            i{
-                color:$color;
-                margin-bottom: 1rem;
-            }
-
-            h3{
-                margin-bottom: 0.6rem;
-            }
-        }
-    }
-}
-
-//About-Section2
-#about-section2{
-    background: $dark-color;
-    color:#ffffff;
-
-    h3{
-        font-size: 1rem;
-    }
-
-    .bar{
-        background:$light-color;
-        overflow: hidden;
-        height:15px;
-        border-radius:10px;
-        margin:0.5rem 0;
-
-        & div{
-            background:$color;
-            height:100%;
-        }
-    }
-}
-
-////About-Section3
-#about-section3{
-    border-bottom: 2px solid $color;
-
-    .logos{
-        display: grid;
-        grid-template-columns:repeat(4,1fr);
-        grid-gap: 2rem;
-
-        img{
-            width:80%;
-        }
-    }
-}
-
-//About-Section4
-#about-section4{
-
-    & .testimonials{
-        margin-top: 3rem;
-        display: grid;
-        grid-template-columns:repeat(4,1fr);
-        grid-gap:1.5rem;
-
-        & .test-para{
-            margin-bottom: 1rem;
-            background: $light-color;
-            padding:0.5rem;
-            text-align: center;
-            border-radius: 2px;
-        }
-
-        & .test-img{
-            
-            img{
-                height:50px;
-                width:50px;
-                border-radius: 50%;
-                margin:0rem 0.5rem;
-            }
-
-            display: flex;
-            align-items: center;
-            font-size: 1rem;
-        }
-    }
-}
-
-
-//Contact
-//Contact-Form
-#contact-sec1{
-    
-    .ip-frm{
-        margin-top:2rem;
-        
-        .grid-dis{
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            grid-gap:1rem;
-
-            input{
-                padding:8px;
-            }
-        }
-
-       .flex-dis{
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-
-           textarea{
-               margin-top:1rem;
-               width:100%;
-           }
-
-           .sub-btn{
-               background: $light-color1;
-               border:0.5px solid $light-color;
-               border-radius:2px;
-               margin-top: 1rem;
-               padding:0.6rem 0;
-               width:50%;
-               transition: all 0.5s ease-in-out;
-
-               &:hover{
-                   cursor: pointer;
-                   background: $color;
-                   border-color:$light-color1;
-               }
-           }
-       }   
-    }
-}
-
-#contact-sec2{
-    background: $light-color1;
-
-    .infos{
-        padding:0.3rem;
-        display: flex;
-        justify-content: space-evenly;
-        text-align: center;
-
-        h2{
-            margin-top:0.6rem;
-        }
-
-        p{
-            margin-top: 0.4rem;
-            font-size: 1.1rem;
-        }
-    }
-}
-
-#contact-sec3{
-    text-align: center;
-    background: $color;
-
-    .large{
-        padding:0.5rem;
-
-        h1{
-            font-size: 4rem;
-        }
-    }
-}
-
-//Footer-ForAll
+//Footer-AllPages
 #main-foot{
     background: $dark-color;
     color:$main-color;
@@ -470,3 +249,165 @@ section{
     }  
 }
 
+@media(max-width:1150px){
+    #main-head .head-content{
+        padding-top: 27%;
+        color:#ffffff;
+
+        a{
+            background:$light-color; ;
+            color:$dark-color;
+    
+            &:hover{
+                background:$dark-color;
+                color:$light-color; 
+            }
+        }
+    }
+}
+
+@media(max-width:790px){
+    #main-head .head-content{
+        padding-top: 35%;
+
+        h2{
+            font-size: 2.45rem;
+            margin-bottom: 0.5rem;       
+        }
+    
+        p{
+            font-size: 1.44rem;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    #main-section1 .boxes-top{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    #main-section2 .boxes-mid{
+        grid-template-columns: repeat(2,1fr);
+
+        div{
+            padding:2rem 0;
+    
+            &:first-child{
+                border-bottom:1px solid $light-color1;
+            }
+            &:last-child{
+                border-top:1px solid $light-color;
+            }
+        }   
+    }
+
+    #main-section3 .boxes-end{
+        grid-template-columns: repeat(2,1fr);
+        grid-gap:2rem;
+    }
+}
+
+@media(max-width:650px){
+
+    header .main-nav{
+        flex-direction: column;
+        justify-content:center;
+    }
+
+    #main-head .head-content{
+        h2{
+            font-size: 2.2rem;
+            margin-bottom: 0.4rem;       
+        }
+    
+        p{
+            font-size: 1.4rem;
+            margin-bottom: 1.1rem;
+        }
+    }
+    
+    #main-section1 .boxes-top{
+        margin-top: 1.5rem;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap:1rem;
+
+        div{
+            padding:1rem;
+        }
+
+        div:not(.last){
+            border-bottom: 0.5px dotted $light-color1;
+        }
+    }
+
+    #main-section2 .boxes-mid{
+        grid-template-columns: repeat(1,1fr);
+
+        div{
+            padding:2rem 0;
+    
+            &:first-child{
+                border:none;
+            }
+            &:last-child{
+                border:none;
+            }
+        }   
+    }
+
+    #main-section3 .boxes-end{
+        margin-top: 1.5rem;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    #main-foot{
+        .foot-content{
+            flex-direction: column;
+            justify-content:center;
+            padding:1.5rem 0;
+
+            p{
+                margin-bottom: 0.8rem;
+            }
+        }  
+    }
+}
+
+@media(max-width:500px){
+    #main-head .head-content{
+        padding-top: 38%;
+
+        h2{
+            font-size: 1.85rem;
+            margin-bottom: 1rem;
+        }
+
+        p{
+            font-size: 1.2rem;
+        }
+    }
+
+    #main-section3{
+        padding-top: 1.5rem;
+    }
+
+    #main-section1,
+    #main-section3{
+        h3{
+            font-size: 1.15rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+    }
+
+    #main-section1 .center,
+    #main-section3 .center{
+        h2{
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: 1.1rem;
+        }
+    }  
+    
+}

@@ -27,34 +27,3 @@
     }
 }
 
-
-/* 
-
-
-.itm-txt{
-        text-align: center;
-
-        h2{
-            margin-bottom:0.5rem;
-        }
-    }
-
-
- &::after{
-        content: '';
-        background: $color;
-        display:block;
-        position: absolute;
-        top:0;
-        left:0;
-        height:100%;
-        widows: 100%;
-        opacity:0.8;
-        transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg) ;
-        transition: transform 2s cubic-bezier(0.2,1,0.3,1);
-    }
-
-    &:hover:after{
-        transform: scale(2) translateX(0) translateY(0) rotate(-28deg) ;
-    }
-*/

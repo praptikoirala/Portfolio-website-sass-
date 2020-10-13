@@ -40,3 +40,11 @@
     }
 }
 
+//HeaderNav(except home)
+#about-head,
+#work-head,
+#contact-head{
+    background: url('/img/showcase.jpg') no-repeat 0% 0%/cover;
+    height:6rem;
+    border-bottom: 4px solid $color;
+}
