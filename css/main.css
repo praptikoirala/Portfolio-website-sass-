@@ -74,35 +74,207 @@ header .main-nav ul li a, #main-head .head-content a {
 }
 
 .items {
-  margin-top: 3rem;
+  margin: 3rem 1rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1.5rem;
+  grid-gap: 2.3rem;
+      grid-template-areas: 'itm-1 itm-2 itm-3' 'itm-4 itm-5 itm-6' 'itm-7 itm-8 itm-9';
 }
 
-.item {
-  background: #DBA768;
-  -webkit-transition: -webkit-transform 0.3s ease-in;
-  transition: -webkit-transform 0.3s ease-in;
-  transition: transform 0.3s ease-in;
-  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+.items .im-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: itm-1;
 }
 
-.item .itm-txt {
+.items .im-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: itm-2;
+}
+
+.items .im-3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: itm-3;
+}
+
+.items .im-4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: itm-4;
+}
+
+.items .im-5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: itm-5;
+}
+
+.items .im-6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: itm-6;
+}
+
+.items .im-7 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: itm-7;
+}
+
+.items .im-8 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: itm-8;
+}
+
+.items .im-9 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: itm-9;
+}
+
+.items .item {
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  height: 100%;
+  width: 100%;
+}
+
+.items .item .itm-img {
+  height: 80%;
+}
+
+.items .item .itm-img img {
+  height: 100%;
+}
+
+.items .item .itm-txt {
+  padding: 0.4rem;
+  height: 20%;
+  background: #B9B9B7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  padding: 0.5rem;
-  border-top: 1px solid #333333;
 }
 
-.item .itm-txt h2 {
-  margin-bottom: 0.5rem;
+.items .item .itm-txt h2 {
+  margin-bottom: 0.2rem;
 }
 
-.item:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+.items .item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+@media (max-width: 975px) {
+  .items {
+    margin: 2rem 1rem;
+  }
+  .items .item .itm-img {
+    height: 75%;
+  }
+  .items .item .itm-txt {
+    padding: .2rem;
+    height: 25%;
+  }
+  .items .item .itm-txt h2 {
+    font-size: 1.3rem;
+  }
+  .items .item .itm-txt p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 875px) {
+  .items .item .itm-img {
+    height: 70%;
+  }
+  .items .item .itm-txt {
+    height: 30%;
+  }
+  .items .item .itm-txt h2 {
+    font-size: 1.2rem;
+  }
+  .items .item .itm-txt p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 800px) {
+  #work-sec1 {
+    padding-top: 2.5rem;
+  }
+  .items {
+        grid-template-areas: 'itm-1 itm-2' 'itm-3 itm-4' 'itm-5 itm-6' 'itm-7 itm-8' 'itm-9 itm-10';
+  }
+  .items .item .itm-img {
+    height: 80%;
+  }
+  .items .item .itm-txt {
+    height: 20%;
+  }
+  .items .item .itm-txt h2 {
+    font-size: 1.3rem;
+  }
+  .items .item .itm-txt p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 620px) {
+  #work-sec1 {
+    padding-top: 2rem;
+  }
+  .items .item .itm-img {
+    height: 75%;
+  }
+  .items .item .itm-txt {
+    padding: 0.3rem;
+    height: 25%;
+  }
+  .items .item .itm-txt h2 {
+    font-size: 1.2rem;
+  }
+  .items .item .itm-txt p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .items {
+    margin: 2rem 3rem;
+        grid-template-areas: 'itm-1' 'itm-2' 'itm-3' 'itm-4' 'itm-5' 'itm-6' 'itm-7' 'itm-8' 'itm-9';
+  }
+  .items .item .itm-img {
+    height: 85%;
+  }
+  .items .item .itm-txt {
+    padding: 0.2rem;
+    height: 15%;
+  }
+  .items .item .itm-txt h2 {
+    font-size: 1.4rem;
+  }
+  .items .item .itm-txt p {
+    font-size: 1.1rem;
+  }
+  .items .item:hover {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+  }
 }
 
 section {
@@ -555,6 +727,7 @@ section {
 }
 
 body {
+  min-height: 100vh;
   color: #333333;
   line-height: 1;
   font-family: 'Noto Sans', sans-serif;

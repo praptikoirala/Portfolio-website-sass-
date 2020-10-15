@@ -1,29 +1,224 @@
 .items{
-    margin-top: 3rem;
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap:1.5rem;
-}
+    margin:3rem 1rem;
+    display: grid;
+    grid-gap:2.3rem;
+    grid-template-areas:
+    'itm-1 itm-2 itm-3'
+    'itm-4 itm-5 itm-6'
+    'itm-7 itm-8 itm-9';
 
-.item{
-    background:$color;
-    transition:transform 0.3s ease-in;
-
-   
-    
-
-    .itm-txt{ 
-        text-align: center;
-        padding:0.5rem;
-        border-top: 1px solid $dark-color;
-
-        h2{
-            margin-bottom: 0.5rem;
-        }
+    .im-1{
+        grid-area: itm-1;
+    }
+    .im-2{
+        grid-area: itm-2;
+    }
+    .im-3{
+        grid-area: itm-3;
+    }
+    .im-4{
+        grid-area: itm-4;
+    }
+    .im-5{
+        grid-area: itm-5;
+    }
+    .im-6{
+        grid-area: itm-6;
+    }
+    .im-7{
+        grid-area: itm-7;
+    }
+    .im-8{
+        grid-area: itm-8;
+    }
+    .im-9{
+        grid-area: itm-9;
     }
 
-    &:hover{
-        transform: scale(1.05);
+    .item{
+        //padding: 1rem;
+        transition: transform 0.5s ease-in;
+        height:100%;
+        width: 100%;
+
+        .itm-img{
+            height:80%;
+
+            img{
+                height:100%;
+            }
+        }
+
+        .itm-txt{
+            padding:0.4rem;
+            height:20%;
+            background:$light-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+
+            h2{
+                margin-bottom: 0.2rem;
+            }
+
+        }
+
+        &:hover{
+            transform:scale(1.1);
+            cursor:pointer;
+        }
+    }
+}
+
+@media(max-width:975px){
+    .items{
+        margin:2rem 1rem;
+        .item{
+    
+            .itm-img{
+                height:75%;
+            }
+    
+            .itm-txt{
+                padding:.2rem;
+                height:25%;
+
+                h2{
+                   font-size: 1.3rem;
+                }
+
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:875px){
+    .items{
+        .item{
+    
+            .itm-img{
+                height:70%;
+            }
+    
+            .itm-txt{
+                height:30%;
+
+                h2{
+                   font-size: 1.2rem;
+                }
+
+                p{
+                    font-size: 0.95rem;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:800px){
+    #work-sec1{
+        padding-top: 2.5rem;
+    }
+    
+    .items{
+        grid-template-areas:
+        'itm-1 itm-2'
+        'itm-3 itm-4'
+        'itm-5 itm-6'
+        'itm-7 itm-8'
+        'itm-9 itm-10';
+        
+        .item{
+    
+            .itm-img{
+                height:80%;
+            }
+    
+            .itm-txt{
+                height:20%;
+
+                h2{
+                   font-size: 1.3rem;
+                }
+
+                p{
+                    font-size:1rem;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:620px){
+    #work-sec1{
+        padding-top: 2rem;
+    }
+
+    .items{
+        
+        .item{
+    
+            .itm-img{
+                height:75%;
+            }
+    
+            .itm-txt{
+                padding:0.3rem;
+                height:25%;
+
+                h2{
+                    font-size: 1.2rem;
+                 }
+ 
+                 p{
+                     font-size:0.9rem;
+                 }
+            }
+        }
+    }
+}
+
+@media(max-width:560px){
+    .items{
+        margin:2rem 3rem;
+        grid-template-areas:
+        'itm-1'
+        'itm-2'
+        'itm-3'
+        'itm-4'
+        'itm-5'
+        'itm-6'
+        'itm-7'
+        'itm-8'
+        'itm-9';
+        
+        .item{
+    
+            .itm-img{
+                height:85%;
+            }
+    
+            .itm-txt{
+                padding:0.2rem;
+                height:15%;
+
+                h2{
+                    font-size: 1.4rem;
+                 }
+ 
+                 p{
+                     font-size:1.1rem;
+                 }
+            }
+
+            &:hover{
+                transform: scale(1.08);
+            }
+        }
     }
 }
 

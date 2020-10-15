@@ -7,9 +7,11 @@
 *{
     margin:0;
     padding:0;
+    
 }
 
 body{
+    min-height: 100vh;
     color:$dark-color;
     line-height: 1;
     font-family: 'Noto Sans', sans-serif;
@@ -226,6 +228,7 @@ header .main-nav{
  
 //Footer-AllPages
 #main-foot{
+ 
     background: $dark-color;
     color:$main-color;
 
