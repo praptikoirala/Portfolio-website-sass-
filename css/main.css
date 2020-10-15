@@ -259,11 +259,11 @@ header .main-nav ul li a, #main-head .head-content a {
         grid-template-areas: 'itm-1' 'itm-2' 'itm-3' 'itm-4' 'itm-5' 'itm-6' 'itm-7' 'itm-8' 'itm-9';
   }
   .items .item .itm-img {
-    height: 85%;
+    height: auto;
   }
   .items .item .itm-txt {
-    padding: 0.2rem;
-    height: 15%;
+    padding: 0.5rem;
+    height: auto;
   }
   .items .item .itm-txt h2 {
     font-size: 1.4rem;

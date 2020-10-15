@@ -37,7 +37,7 @@
 
     .item{
         //padding: 1rem;
-        transition: transform 0.5s ease-in;
+        transition: transform 0.5s ease-in;        
         height:100%;
         width: 100%;
 
@@ -199,12 +199,12 @@
         .item{
     
             .itm-img{
-                height:85%;
+                height:auto;
             }
     
             .itm-txt{
-                padding:0.2rem;
-                height:15%;
+                padding:0.5rem;
+                height:auto;
 
                 h2{
                     font-size: 1.4rem;
