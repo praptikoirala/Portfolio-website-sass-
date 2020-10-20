@@ -65,11 +65,11 @@ header .main-nav ul li a, #main-head .head-content a {
   border-bottom: 4px solid #DBA768;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 850px) {
   #about-head,
   #work-head,
   #contact-head {
-    height: 8rem;
+    height: 5rem;
   }
 }
 
@@ -721,6 +721,109 @@ section {
   }
 }
 
+header .main-nav .hamburger {
+  cursor: pointer;
+  z-index: 5;
+  display: none;
+}
+
+header .main-nav .hamburger .hamburger-lines {
+  height: 4px;
+  width: 2rem;
+  background: #ffffff;
+}
+
+header .main-nav .hamburger .hamburger-lines:not(.last-line) {
+  margin-bottom: 0.2rem;
+}
+
+header .main-nav .hamburger .hamburger-lines .rotate:last-child {
+  visibility: hidden;
+}
+
+header .main-nav .hamburger .hamburger-lines .rotate:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+header .main-nav .hamburger .hamburger-lines .rotate:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+@media (max-width: 850px) {
+  header .main-nav .menu-items {
+    position: fixed;
+    z-index: 3;
+    height: 100vh;
+    width: 40%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.9);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  }
+  header .main-nav .menu-items .show {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  header .main-nav .menu-items .menu-item {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    color: #DBA768;
+    font-size: 1.3rem;
+  }
+  header .main-nav .menu-items .menu-item:hover {
+    color: #B9B9B7;
+    border-color: #DBA768;
+  }
+  header .main-nav .menu-items .menu-item.current {
+    border-color: #B9B9B7;
+  }
+  header .main-nav .menu-items .menu-item .visible {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  header .main-nav .hamburger {
+    display: block;
+    position: fixed;
+    left: 2rem;
+  }
+}
+
+/* @media(max-width:750px){
+
+    header .main-nav{
+
+        .menu-items{
+            width:48%;
+        }
+    }
+}
+
+@media(max-width:600px){
+
+    header .main-nav{
+
+        .menu-items{
+            width:60%;
+        }
+    }
+} */
 * {
   margin: 0;
   padding: 0;
@@ -781,9 +884,8 @@ header .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -818,7 +920,7 @@ header .main-nav ul li a.current {
 
 #main-head .head-content {
   text-align: center;
-  padding-top: 25%;
+  padding-top: 18%;
 }
 
 #main-head .head-content h2 {
@@ -982,8 +1084,7 @@ header .main-nav ul li a.current {
 
 @media (max-width: 1150px) {
   #main-head .head-content {
-    padding-top: 35%;
-    color: #ffffff;
+    padding-top: 20%;
   }
   #main-head .head-content a {
     background: #B9B9B7;
@@ -997,7 +1098,8 @@ header .main-nav ul li a.current {
 
 @media (max-width: 790px) {
   #main-head .head-content {
-    padding-top: 45%;
+    padding-top: 25%;
+    color: #ffffff;
   }
   #main-head .head-content h2 {
     font-size: 2.45rem;
@@ -1040,6 +1142,9 @@ header .main-nav ul li a.current {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  #main-head .head-content {
+    padding-top: 35%;
   }
   #main-head .head-content h2 {
     font-size: 2.2rem;
@@ -1101,9 +1206,6 @@ header .main-nav ul li a.current {
   header .main-nav ul li {
     padding: 0.2rem;
     font-size: 1.2rem;
-  }
-  #main-head .head-content {
-    padding-top: 65%;
   }
   #main-head .head-content h2 {
     font-size: 1.85rem;

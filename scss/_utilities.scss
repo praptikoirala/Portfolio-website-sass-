@@ -56,10 +56,10 @@
     border-bottom: 4px solid $color;
 }
 
-@media(max-width:650px){
+@media(max-width:850px){
     #about-head,
     #work-head,
     #contact-head{
-        height:8rem;
+        height:5rem;
     }
 }

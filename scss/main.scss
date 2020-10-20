@@ -3,6 +3,7 @@
 @import 'gallery';
 @import 'about';
 @import 'contact';
+@import 'sidebar';
 
 *{
     margin:0;
@@ -68,7 +69,7 @@ img{
 //Navbar
 header .main-nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 1rem 0;
 
@@ -100,7 +101,7 @@ header .main-nav{
 //Home-HeaderContent
 #main-head .head-content{
     text-align: center;
-    padding-top:25%;
+    padding-top:18%;
 
     h2{
         font-size: 2.5rem;
@@ -254,8 +255,7 @@ header .main-nav{
 
 @media(max-width:1150px){
     #main-head .head-content{
-        padding-top:35%;
-        color:#ffffff;
+        padding-top:20%;
 
         a{
             background:$light-color; ;
@@ -269,9 +269,11 @@ header .main-nav{
     }
 }
 
+
 @media(max-width:790px){
     #main-head .head-content{
-        padding-top: 45%;
+        padding-top:25%;
+        color:#ffffff;
 
         h2{
             font-size: 2.45rem;
@@ -317,6 +319,8 @@ header .main-nav{
     }
 
     #main-head .head-content{
+        padding-top:35%;
+
         h2{
             font-size: 2.2rem;
             margin-bottom: 0.4rem;       
@@ -389,7 +393,7 @@ header .main-nav{
     }
     
     #main-head .head-content{
-        padding-top: 65%;
+       
 
         h2{
             font-size: 1.85rem;
