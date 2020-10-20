@@ -727,6 +727,22 @@ header .main-nav .hamburger {
   display: none;
 }
 
+header .main-nav .hamburger.rotate .line1 {
+  visibility: hidden;
+}
+
+header .main-nav .hamburger.rotate .line2 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+header .main-nav .hamburger.rotate .last-line {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  position: absolute;
+  top: 7.5px;
+}
+
 header .main-nav .hamburger .hamburger-lines {
   height: 4px;
   width: 2rem;
@@ -735,20 +751,10 @@ header .main-nav .hamburger .hamburger-lines {
 
 header .main-nav .hamburger .hamburger-lines:not(.last-line) {
   margin-bottom: 0.2rem;
-}
-
-header .main-nav .hamburger .hamburger-lines .rotate:last-child {
-  visibility: hidden;
-}
-
-header .main-nav .hamburger .hamburger-lines .rotate:first-child {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-header .main-nav .hamburger .hamburger-lines .rotate:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
 }
 
 @media (max-width: 850px) {
@@ -772,12 +778,12 @@ header .main-nav .hamburger .hamburger-lines .rotate:nth-child(2) {
             justify-content: center;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
-    -webkit-transition: -webkit-transform 0.5s ease-in-out;
-    transition: -webkit-transform 0.5s ease-in-out;
-    transition: transform 0.5s ease-in-out;
-    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   }
-  header .main-nav .menu-items .show {
+  header .main-nav .menu-items.show {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
@@ -794,9 +800,13 @@ header .main-nav .hamburger .hamburger-lines .rotate:nth-child(2) {
   header .main-nav .menu-items .menu-item.current {
     border-color: #B9B9B7;
   }
-  header .main-nav .menu-items .menu-item .visible {
+  header .main-nav .menu-items .menu-item.visible {
     -webkit-transform: scale(1);
             transform: scale(1);
+    -webkit-transition: -webkit-transform 0.2s 0.2s ease-in;
+    transition: -webkit-transform 0.2s 0.2s ease-in;
+    transition: transform 0.2s 0.2s ease-in;
+    transition: transform 0.2s 0.2s ease-in, -webkit-transform 0.2s 0.2s ease-in;
   }
   header .main-nav .hamburger {
     display: block;
@@ -805,25 +815,18 @@ header .main-nav .hamburger .hamburger-lines .rotate:nth-child(2) {
   }
 }
 
-/* @media(max-width:750px){
-
-    header .main-nav{
-
-        .menu-items{
-            width:48%;
-        }
-    }
+@media (max-width: 750px) {
+  header .main-nav .menu-items {
+    width: 45%;
+  }
 }
 
-@media(max-width:600px){
+@media (max-width: 600px) {
+  header .main-nav .menu-items {
+    width: 60%;
+  }
+}
 
-    header .main-nav{
-
-        .menu-items{
-            width:60%;
-        }
-    }
-} */
 * {
   margin: 0;
   padding: 0;

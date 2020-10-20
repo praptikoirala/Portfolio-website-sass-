@@ -1,7 +1,7 @@
 let sideButton = document.querySelector(".hamburger");
 let menuItem = document.querySelector(".menu-items");
 let menuItems = document.querySelectorAll(".menu-item");
-let sidemenuLines = document.querySelectorAll(".hamburger-lines");
+let sidemenuLines = document.querySelectorAll(".hamburger");
 
 sideButton.addEventListener("click", toggleMenu);
 
